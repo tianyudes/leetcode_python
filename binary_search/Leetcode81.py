@@ -7,7 +7,7 @@ class Solution(object):
         """
         l, r = 0, len(nums) - 1
         while l <= r:
-            mid = l + (l-r) // 2
+            mid = l + (r-l) // 2  # !!
             if nums[mid] == target: return True
 
             while l < mid and nums[l] == nums[mid]:
